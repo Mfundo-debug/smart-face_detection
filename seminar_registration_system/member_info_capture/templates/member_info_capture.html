@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<h1> Member Information Capture</h1>
+<form method="post">
+{% csrf_token %}
+<div>
+    <label for="student_type">Are you a new or returning student?</label>
+    <select name="student_type" id="student_type">
+        <option value="new">New</option>
+        <option value="returning">Returning</option>
+    </select>
+</div>
+<div>
+    <label for="last_name">Last Name:</label>
+    <input type="text" name="last_name" id="last_name">
+</div>
+<div>
+    <label for="first_names">First Names:</label>
+    <input type="text" name="first_names" id="first_names">
+</div>
+<div>
+    <label for="personal_email">Personal Email:</label>
+    <input type="text" name="personal_email" id="personal_email">
+</div>
+<div>
+    <label for="'student_id">Student ID:</label>
+    <input type="text" name="student_id" id="student_id">
+</div>
+<div>
+    <label for="residential_address">Residential Address:</label>
+    <input type="text" name="residential_address" id="residential_address">
+</div>
+<button type="submit">Submit</button>
+</form>
+{% endblock %}
