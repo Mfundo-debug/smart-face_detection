@@ -1,6 +1,6 @@
 # Smart Registration System with AI
 
-The System presents a comprehensive study on the development of a Smart RegistraƟon System with AI, Object Detection & Computer Vision for Attendance. The system aims to revolutionize the traditional attendance management process in educational insƟtutions or Conference meetings by leveraging advanced technologies. The motivation behind this system is the need for a more efficient and accurate attendance tracking system that can overcome the limitations of manual methods
+The System presents a comprehensive study on the development of a Smart Registration System with AI, Object Detection & Computer Vision for Attendance. The system aims to revolutionize the traditional attendance management process in educational institutions or Conference meetings by leveraging advanced technologies. The motivation behind this system is the need for a more efficient and accurate attendance tracking system that can overcome the limitations of manual methods
 
 ## Objectives
 
@@ -8,7 +8,7 @@ The objectives of the system are to automate the attendance process, improve acc
 
 ## Related Work
 
-The system discusses related work in the field of mulƟmedia registration systems, AI, object detection, and computer vision. It reviews existing literature and research, highlighting the advancements and limitations of previous systems. This background information provides a context for the proposed system and highlights its novel contributions.
+The system discusses related work in the field of multimedia registration systems, AI, object detection, and computer vision. It reviews existing literature and research, highlighting the advancements and limitations of previous systems. This background information provides a context for the proposed system and highlights its novel contributions.
 
 ## System Architecture
 
