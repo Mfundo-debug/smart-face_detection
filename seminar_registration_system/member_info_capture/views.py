@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from .models import Member
 from django.urls import reverse
 from django.contrib import messages
+from django.http import HttpResponse
 
 def member_info_capture(request):
     if request.method == 'POST':
@@ -26,3 +27,17 @@ def member_info_capture(request):
     #Handle GET requests
     return redirect('member_info_capture')
 
+def find_user(request):
+    if request.method == 'POST':
+        user_number = request.POST.get('user_number')
+        try:
+            member = Member.objects.get(user_number=user_number)
+            return redirect(reverse('admin: member_info_capture_member_change', args=[member.id]))
+        except Member.DoesNotExist:
+            messages.error(request, 'Member with user number {} does not exist'.format(user_number))
+            return redirect('member_info_capture')
+        except ValueError:
+            messages.error(request, 'Invalid user number')
+            return redirect('member_info_capture')
+    #Handle GET requests
+    return HttpResponse('/')
