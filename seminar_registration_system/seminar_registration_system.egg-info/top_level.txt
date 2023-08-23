@@ -1,0 +1,2 @@
+member_info_capture
+seminar_registration_system

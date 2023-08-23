@@ -1,7 +1,10 @@
-{% extends 'base.html' %}
-
+{% extends 'member_info_capture/base.html' %}
+{% load static %}
 {% block title %}
 <h1>Find User</h1>
+<link rel = "stylesheet" type = "text/css" href = "{% static 'member_info_capture/style.css' %}">
+{% endblock %}
+{% block content %}
 <form method="post" action="{% url 'find_user' %}">
 {% csrf_token %}
 <label for="user_number">Enter User Number</label>

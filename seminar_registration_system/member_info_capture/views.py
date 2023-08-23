@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from .models import Member
+from member_info_capture.models import Member
 from django.urls import reverse
 from django.contrib import messages
 from django.http import HttpResponse
@@ -41,3 +41,7 @@ def find_user(request):
             return redirect('member_info_capture')
     #Handle GET requests
     return HttpResponse('/')
+
+def landing_page(request):
+    return render(request, 'member_info_capture/landing_page.html')
+
