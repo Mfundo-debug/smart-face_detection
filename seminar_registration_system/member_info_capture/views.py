@@ -45,3 +45,12 @@ def find_user(request):
 def landing_page(request):
     return render(request, 'member_info_capture/landing_page.html')
 
+def validate_information(request):
+    student_number =request.POST.get('student_number')
+
+    try:
+        member = Member.objects.get(student_number=student_number)
+        return render(request, 'member_info_capture/validate_information.html', {'member': member})
+    except Member.DoesNotExist:
+        messages.error(request, 'Member with student number {} does not exist'.format(student_number))
+        return redirect('member_info_capture') #redirect to the landing page
