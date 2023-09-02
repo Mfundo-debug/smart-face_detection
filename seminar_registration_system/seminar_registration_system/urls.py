@@ -21,6 +21,7 @@ from member_info_capture import views
 from django.conf.urls.static import static
 from django.conf import settings
 urlpatterns = [
+    path('api/', include('member_info_capture.urls')),
     path('admin/', admin.site.urls),
     path('', RedirectView.as_view(url='member_info_capture/')),
     path('member_info_capture/', include('member_info_capture.urls')),
