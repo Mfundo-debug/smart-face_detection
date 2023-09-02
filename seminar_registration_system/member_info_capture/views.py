@@ -3,6 +3,18 @@ from member_info_capture.models import Member
 from django.urls import reverse
 from django.contrib import messages
 from django.http import HttpResponse
+from rest_framework import viewsets
+from .serializers import MemberSerializer
+
+class MemberViewSet(viewsets.ModelViewSet):
+    queryset = Member.objects.all()
+    serializer_class = MemberSerializer
+
+class MemberInfoCaptureViewSet(viewsets.ModelViewSet):
+    queryset = Member.objects.all()
+    serializer_class = MemberSerializer
+
+
 
 def member_info_capture(request):
     if request.method == 'POST':
