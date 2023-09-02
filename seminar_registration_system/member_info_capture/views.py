@@ -4,15 +4,15 @@ from django.urls import reverse
 from django.contrib import messages
 from django.http import HttpResponse
 from rest_framework import viewsets
-from .serializers import MemberSerializer
+from .serializers import MemberInfoCaptureSerializer
 
 class MemberViewSet(viewsets.ModelViewSet):
     queryset = Member.objects.all()
-    serializer_class = MemberSerializer
+    serializer_class = MemberInfoCaptureSerializer
 
 class MemberInfoCaptureViewSet(viewsets.ModelViewSet):
     queryset = Member.objects.all()
-    serializer_class = MemberSerializer
+    serializer_class = MemberInfoCaptureSerializer
 
 
 

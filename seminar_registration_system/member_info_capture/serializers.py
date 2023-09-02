@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import MemberInfoCapture
+from .models import Member
 
 class MemberInfoCaptureSerializer(serializers.ModelSerializer):
     class Meta:
-        model = MemberInfoCapture
+        model = Member
         fields = '__all__'
