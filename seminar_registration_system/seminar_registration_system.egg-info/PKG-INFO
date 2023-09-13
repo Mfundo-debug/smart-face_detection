@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: seminar-registration-system
+Version: 0.1
+Summary: A seminar registration system
+Author: Mfundo Monchwe
+Author-email: diditmfundo@gmail.com
+Requires-Python: >=3.8

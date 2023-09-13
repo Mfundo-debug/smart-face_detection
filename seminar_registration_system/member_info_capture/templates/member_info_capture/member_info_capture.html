@@ -1,8 +1,12 @@
-{% extends 'base.html' %}
-
+{% extends 'member_info_capture/base.html' %}
+{% load static %}
 {% block title %}
 <h1> Member Information Capture</h1>
-<form method="post">
+<link rel="stylesheet" href="{% static 'member_info_capture/style.css' %}">
+{% endblock %}
+
+{% block content %}
+<form method="post" action="{% url 'member_info_capture' %}">
 {% csrf_token %}
 <div>
     <label for="student_type">Are you a new or returning student?</label>
