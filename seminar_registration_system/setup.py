@@ -6,7 +6,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        'django==4.2.4',
+        'django==4.2.7',
     ],
     python_requires='>=3.8',
     author='Mfundo Monchwe',
